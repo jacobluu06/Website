@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Gloria+Hallelujah&family=Oswald&family=Permanent+Marker&display=swap');
+
+body {
+    font-size: large;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: rgb(204, 104, 22);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+main {
+    min-height: 52vh;
+    grid-row: 1;
+}
+
+nav a {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+nav li, footer li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar {
+    margin: 0;
+    display: inline-block;
+    border-radius: 35px;
+    padding: 5px;
+}
+
+.navbar li:hover {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.div1 a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(182, 194, 89);
+    border: 5px rgb(156, 41, 41);
+    border-radius: 35px;
+    padding: 5px;
+}
+
+.div0 {
+    border: solid rgb(37, 9, 9) 5px;
+    border-radius: 35px;
+    padding: 10px;
+}
+
+.emphasis {
+    color: rgb(199, 158, 22) !important;
+}
+
+span {
+    text-decoration: underline;
+    text-decoration-color: rgb(156, 41, 41);
+}
+
+footer, footer a, footer li {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(182, 194, 89);
+    grid-row: 2;
+    margin-bottom: 15px;
+}
+
+footer a {
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    font-weight: lighter;
+}
+
+footer li {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.float {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.float::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.leftfloat, .rightfloat {
+    max-height: 8vh;
+    min-height: 8vh;
+    min-width: 8vh;
+    max-width: 8vh;
+}
+
+.leftfloat {
+    float: left;
+}
+
+.rightfloat {
+    float: right;
+}
+
+.currentPage {
+    border: 4px double rgb(156, 41, 41);
+    border-radius: 35px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    * {
+        text-align: center;
+        font-size: small !important;
+    }
+
+    body {
+        background-image: none;
+        background-color:rgba(0, 0, 0, 0.945);
+    }
+    .navbar li:hover {
+        font-size: large;
+    }
+}

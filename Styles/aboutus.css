@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Gloria+Hallelujah&family=Oswald&family=Permanent+Marker&display=swap');
+
+* {
+    color: rgb(245, 255, 168);
+    font-family: 'Arsenal', sans-serif;
+    font-weight: bolder;
+    --AboutusBorder: dotted rgb(156, 41, 41) 5px;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/BackgroundImage1.png);
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    color: rgb(245, 255, 168);
+}
+
+h2 {
+    font-size: 1.7em;
+    color: rgb(182, 194, 89);
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    border: var(--AboutusBorder);
+    border-radius: 35px;
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
+}
+
+h3,
+h4 {
+    color: rgb(204, 104, 22);
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    font-size: 1.2em;
+}
+
+p {
+    font-size: large;
+    line-height: 25pt;
+}
+
+header p {
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-indent: 25px;
+}
+
+.div1 img {
+    max-height: 17vh;
+    min-height: 17vh;
+    min-width: 12vh;
+    max-width: 12vh;
+    border: 1px solid black;
+    margin-bottom: 90px;
+}

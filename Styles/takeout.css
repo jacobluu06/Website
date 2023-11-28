@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Gloria+Hallelujah&family=Oswald&family=Permanent+Marker&display=swap');
+
+* {
+    color: rgb(245, 255, 168);
+    font-family: 'Arsenal', sans-serif;
+    font-weight: bolder;
+    --TakeOutBorder: solid rgb(156, 41, 41) 1px;
+    --NeedMenuBorder: dotted rgb(156, 41, 41) 5px;
+    list-style-type: none;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/BackgroundImage1.png);
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    color: rgb(245, 255, 168);
+}
+
+h2 {
+    font-size: 1.7em;
+    color: rgb(182, 194, 89);
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    border: var(--NeedMenuBorder);
+    border-radius: 35px;
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
+}
+
+.takeoutgrid p,
+.takeoutgrid a {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.2em;
+}
+
+.takeoutgrid {
+    display: grid;
+    grid-template-columns: repeat(6, .5fr);
+    grid-template-rows: repeat(2, .5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: var(--TakeOutBorder);
+    border-radius: 35px;
+    margin: 50px;
+    padding: 20px;
+}
+
+.delivery {
+    grid-area: 1 / 2 / 2 / 6;
+    border: var(--TakeOutBorder);
+    border-radius: 35px;
+}
+
+.delivery li {
+    display: inline-block;
+    margin: auto;
+    margin-right: 70px;
+    border: solid black 1px;
+    border-radius: 35px;
+    padding: 10px;
+}
+
+.delivery img {
+    max-height: 12vh;
+    min-height: 12vh;
+    min-width: 14vh;
+    max-width: 14vh;
+}
+
+.delivery li:nth-child(1) span {
+    color: rgb(24, 180, 37);
+    text-decoration: none;
+}
+
+.delivery li:nth-child(2) span {
+    color: rgb(209, 10, 10);
+    text-decoration: none;
+}
+
+.delivery li:nth-child(3) span {
+    color: rgb(223, 85, 6);
+    text-decoration: none;
+}
+
+.delivery li:nth-child(4) span {
+    color: rgb(69, 78, 204);
+    text-decoration: none;
+}
+
+.call {
+    grid-area: 2 / 2 / 3 / 4;
+    border: var(--TakeOutBorder);
+    border-radius: 35px;
+    margin-bottom: 0%;
+}
+
+.needmenu {
+    grid-area: 1 / 1 / 2 / 2;
+    border: var(--TakeOutBorder);
+    border-radius: 35px;
+    margin: auto;
+    padding: 15px;
+}
+
+.address {
+    grid-area: 2 / 4 / 3 / 6;
+    border: var(--TakeOutBorder);
+    border-radius: 35px;
+    margin-bottom: 0%;
+}
+
+.availability {
+    grid-area: 1 / 6 / 2 / 7;
+    border: var(--TakeOutBorder);
+    margin: auto;
+    border-radius: 35px;
+    padding: 15px;
+}
+
+th {
+    font-size: larger;
+}
+
+td {
+    line-height: 25pt;
+}
+
+header p {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 768px) {
+    .takeoutgrid {
+        display: grid;
+        grid-template-columns: repeat(6, .2fr);
+        grid-template-rows: repeat(2, .2fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        border: var(--TakeOutBorder);
+        border-radius: 35px;
+    }
+
+    .availability {
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .address {
+        grid-area: 2 / 6 / 3 / 7;
+    }
+
+    .call {
+        grid-area: 2 / 1 / 3 / 6;
+    }
+    .delivery {
+        grid-area: 1 / 1 / 2 / 5;
+        border: none;
+        border-left: var(--TakeOutBorder);
+        border-top: var(--TakeOutBorder);
+        border-bottom: var(--TakeOutBorder);
+    }
+    .needmenu {
+        grid-area: 1 / 5 / 2 / 6;
+        margin: 0%;
+        border: none;
+        border-right: var(--TakeOutBorder);
+        border-top: var(--TakeOutBorder);
+        border-bottom: var(--TakeOutBorder);
+    }
+
+    .delivery li {
+        font-size: 0.65em;
+        line-height: 30pt;
+    }
+
+    .delivery img {
+        max-height: 4vh;
+        min-height: 4vh;
+        min-width: 6vh;
+        max-width: 6vh;
+
+    }
+
+}

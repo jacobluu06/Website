@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Gloria+Hallelujah&family=Oswald&family=Permanent+Marker&display=swap');
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/HomeBackgroundImage.jpg);
+}
+
+#logo {
+    background-image: url(./Images/CPPLogo.webp);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center 130px;
+}
+
+header {
+    text-align: center;
+    margin-top: 17%;
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+}
+
+header h1 {
+    text-align: left;
+    padding-left: 40px;
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    color: rgb(245, 255, 168);
+    font-size: 2em;
+    margin-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 140px;
+}
+
+header h2 {
+    text-align: left;
+    padding-left: 40px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.4em;
+    margin-top: 20px;
+    padding-bottom: 25px;
+}
+
+span {
+    text-decoration: underline;
+    text-decoration-color: rgb(156, 41, 41);
+}
+p {
+    line-height: 25pt;
+}
+.float {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.float::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.leftfloat {
+    float: left;
+    max-height: 8vh;
+    min-height: 8vh;
+    min-width: 8vh;
+    max-width: 8vh;
+}
+
+.rightfloat {
+    float: right;
+    max-height: 8vh;
+    min-height: 8vh;
+    min-width: 8vh;
+    max-width: 8vh;
+}
+
+.Review1 {
+    text-align: right;
+    padding-right: 80px;
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(156, 41, 41);
+    border: dotted 5px rgb(156, 41, 41);
+    border-radius: 35px;
+    padding: 10px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+
+    #logo {
+        background-position: center 530px;
+        background-size: 40%;
+    }
+    footer,
+    footer a {
+        margin-top: 180px;
+    }
+}
