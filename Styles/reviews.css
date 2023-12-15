@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/HomeBackgroundImage.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/HomeBackgroundImage.jpg);
 }
 
 p {
@@ -8,15 +8,18 @@ p {
     line-height: 25pt;
 }
 
-
-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 15px;
-    column-gap: 5px;
-    border: double white 5px;
+.video, .form {
+    border: var(--itemsBorder);
     padding: 50px;
+    background:rgb(8, 8, 8);
+}
+
+.video {
+    margin-left: 10px;
+}
+
+.form {
+    margin-right: 10px;
 }
 
 label:not(fieldset > label)::after {
@@ -29,13 +32,28 @@ input {
     font-size: larger;
 }
 
-fieldset :where([type="checkbox"], [type="radio"]) {
-    width: 22px;
-    height: 22px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
+.Rating fieldset,
+.Service fieldset,
+.features fieldset {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Rating fieldset label,
+.Service fieldset label,
+.features fieldset label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.Rating fieldset input,
+.Service fieldset input,
+.features fieldset input {
     display: inline-block;
     vertical-align: top;
+    margin-left: 45px; 
 }
 
 input[type=textarea],
@@ -57,9 +75,8 @@ fieldset {
 textarea,
 input,
 button,
-select,
-legend {
-    background: transparent;
+select{
+    background: rgb(39, 38, 38);
     text-align: left;
     margin: auto;
     padding-inline-end: 10px;
@@ -75,71 +92,86 @@ select {
 }
 
 .Info {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+label{
     grid-column: 1/2;
-    grid-row: 1/2;
+    text-align: right;
 }
 
-.Rating {
-    grid-column: 2/3;
+input {
+grid-column: 2/3;
+justify-content: left;
+margin-left: 10px;
+padding-left: 10px;
+margin-bottom: 20px;
 }
-
-.Service {
-    grid-column: 3/4;
-}
-
-.idk {
-    grid-column: 4/5;
-}
-
-.Hear {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.Comment {
-grid-column: 2 / span 2;
-grid-row: 2/3;
-}
-
-.Button {
-    grid-column: 4/5;
-    grid-row: 2/3;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 .Reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.video-grid {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+.form:is(:hover, :focus), .video:is(:hover, :focus) {
+    border-image: linear-gradient(45deg, #e0e0e0, #ff8570);
+    animation: glow 1s infinite alternate;
+    box-shadow: 0 0 10px 5px rgba(255, 133, 112, 0.7); 
 }
 
-video {
-    display: block;
-    margin: 0 auto;
-    grid-row: 1/2;
-    grid-column: 1/2;
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 3px rgba(255, 133, 112, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(177, 30, 4, 0.7);
+    }
 }
 
-.video-grid h2 {
-    grid-row: 1/2;
-    grid-column: 1/2;
-}
+@media (max-width: 768px) {
 
-.video-grid p {
-    grid-row: 2/3;
+    header{
+        margin-top: 5%;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+    form{
+        display:inline-block;
+        grid-row: 1/2;
+        margin-right: 5%;
+    }
+
+    main {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-gap: 20px;
+    }
+
+    .video {
+        border: none;
+        background: none;
+        grid-row: 2/3; 
+        margin-left: 35px;
+        padding: 0; 
+    }
+
+    .form {
+        border: none;
+        background: none;
+        grid-row: 1/2; 
+        margin-right: 0;
+        margin-left: 35px;
+    }
+
+    p {
+        font-size: 99%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
 }

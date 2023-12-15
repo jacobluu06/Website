@@ -7,8 +7,7 @@
 }
 
 :root {
-    --AboutusBorder: dotted rgb(156, 41, 41) 5px;
-    --menuBorder: dotted rgb(156, 41, 41) 5px;
+    --Border: dotted rgb(156, 41, 41) 5px;
     --itemsBorder: solid rgb(156, 41, 41) 1px;
     --Color_Because_I_Need_my_Fourth_CSS_Custom_Properties: rgb(24, 180, 37);
     --Color_Because_I_Need_my_Fifth_CSS_Custom_Properties: rgb(209, 10, 10);
@@ -26,7 +25,6 @@ body {
     background-color: black;
     min-height: 100vh;
     font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/BackgroundImage1.png);
     overflow-x: hidden;
 
 }
@@ -46,6 +44,7 @@ nav a {
     text-decoration: none;
     font-size: larger;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 nav li, footer li {
@@ -87,9 +86,14 @@ nav li, footer li {
     color: rgb(199, 158, 22) !important;
 }
 
+.link-emphasis {
+    color: rgb(216, 100, 65) !important;
+    font-weight: lighter;
+}
+
 span {
     text-decoration: underline;
-    text-decoration-color: rgb(156, 41, 41);
+    text-decoration-color: rgb(160, 43, 43);
 }
 
 footer, footer a, footer li {
@@ -120,6 +124,7 @@ footer {
 .float {
     display: inline-block;
     overflow: hidden;
+    text-align: center;
 }
 
 .float::after {
@@ -159,14 +164,12 @@ footer {
     body {
         background-image: none;
         font-size: 16px;
-        background-color:rgba(0, 0, 0, 0.945);
+        background-color:rgba(0, 0, 0, 0.945) !important;
     }
     .navbar li:hover {
-        font-size: small;
+        font-size: 100%;
     }
-    .navbar a {
-        padding: 10px;
-      }
+
       .div0 {
         max-width: 95.5%;
       }
