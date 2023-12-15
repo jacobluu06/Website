@@ -5,19 +5,13 @@
     --AboutusBorder: dotted rgb(156, 41, 41) 5px;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/BackgroundImage1.png);
-}
-
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
-    color: rgb(245, 255, 168);
 }
 
 h2 {
     font-size: 1.7em;
     color: rgb(182, 194, 89);
-    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
     border: var(--AboutusBorder);
     border-radius: 35px;
     padding: 10px;
@@ -25,17 +19,14 @@ h2 {
     display: inline-block;
 }
 
-h3,
-h4 {
-    color: rgb(204, 104, 22);
-    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
-    font-size: 1.2em;
-}
-
 p {
     font-size: large;
     line-height: 25pt;
+    margin: auto;
+    padding-inline-start: 150px;
+    padding-inline-end: 150px;
 }
+
 
 header p {
     margin: 0;
@@ -50,5 +41,13 @@ header p {
     min-width: 12vh;
     max-width: 12vh;
     border: 1px solid black;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
+    margin-top: 25px;
 }
+
+@media (max-width: 768px) {
+    main {
+     margin: auto;
+     padding: 20px;
+    }
+  }

@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Gloria+Hallelujah&family=Oswald&family=Permanent+Marker&display=swap');
 
+* {
+    color: rgb(245, 255, 168);
+    font-family: 'Arsenal', sans-serif;
+    font-weight: bolder;
+}
+
+:root {
+    --AboutusBorder: dotted rgb(156, 41, 41) 5px;
+    --menuBorder: dotted rgb(156, 41, 41) 5px;
+    --itemsBorder: solid rgb(156, 41, 41) 1px;
+    --Color_Because_I_Need_my_Fourth_CSS_Custom_Properties: rgb(24, 180, 37);
+    --Color_Because_I_Need_my_Fifth_CSS_Custom_Properties: rgb(209, 10, 10);
+    --Color_So_It_Matches_My_Other_CSS_Custom_Properties1: rgb(223, 85, 6);
+    --Color_So_It_Matches_My_Other_CSS_Custom_Properties2: rgb(69, 78, 204);
+}
+
 body {
     font-size: large;
     background-repeat: no-repeat;
@@ -9,8 +25,14 @@ body {
     text-transform: uppercase;
     background-color: black;
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.684)), url(../Images/BackgroundImage1.png);
+    overflow-x: hidden;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Permanent Marker', cursive, Calibri, sans-serif;
 }
 
 main {
@@ -56,6 +78,9 @@ nav li, footer li {
     border: solid rgb(37, 9, 9) 5px;
     border-radius: 35px;
     padding: 10px;
+    width: 100%;
+    max-width: 98.5%;
+    overflow-x: hidden;
 }
 
 .emphasis {
@@ -83,6 +108,13 @@ footer a {
 footer li {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    left: 110;
+    width: 100%;
+    padding: 20px;
 }
 
 .float {
@@ -121,14 +153,21 @@ footer li {
 @media (max-width: 768px) {
     * {
         text-align: center;
-        font-size: small !important;
+        margin: auto;
     }
 
     body {
         background-image: none;
+        font-size: 16px;
         background-color:rgba(0, 0, 0, 0.945);
     }
     .navbar li:hover {
-        font-size: large;
+        font-size: small;
     }
+    .navbar a {
+        padding: 10px;
+      }
+      .div0 {
+        max-width: 95.5%;
+      }
 }
